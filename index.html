@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Nabila ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#ff9ecf,#8fd3ff);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+.container{
+padding:40px 20px;
+}
+
+h1{
+font-size:45px;
+margin-top:20px;
+}
+
+h2{
+margin:15px 0;
+}
+
+p{
+font-size:18px;
+line-height:1.8;
+}
+
+button{
+margin-top:20px;
+padding:15px 30px;
+font-size:18px;
+border:none;
+border-radius:30px;
+background:#ff4d88;
+color:white;
+cursor:pointer;
+}
+
+button:hover{
+background:#ff2f70;
+}
+
+.card{
+background:white;
+color:#333;
+max-width:700px;
+margin:40px auto;
+padding:25px;
+border-radius:20px;
+box-shadow:0 10px 30px rgba(0,0,0,.2);
+}
+
+.gallery{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+margin-top:20px;
+}
+
+.gallery img{
+width:220px;
+border-radius:15px;
+box-shadow:0 5px 15px rgba(0,0,0,.3);
+transition:.3s;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+footer{
+padding:30px;
+font-size:18px;
+}
+
+.heart{
+position:fixed;
+top:-20px;
+color:pink;
+font-size:20px;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🎂 Happy Birthday</h1>
+
+<h2>Nabila Ayu Permata Sari ❤️</h2>
+
+<p>
+Selamat ulang tahun sayangku.<br>
+Semoga selalu sehat, bahagia,<br>
+dan semua impianmu tercapai.<br><br>
+
+Terima kasih sudah hadir di hidupku. ❤️
+</p>
+
+<button onclick="bukaSurat()">
+💌 Buka Surat
+</button>
+
+<div class="card" id="surat" style="display:none;">
+
+<h2>Untuk Nabila ❤️</h2>
+
+<p>
+
+Happy Birthday Sayang...
+
+Semoga hari ini menjadi awal dari banyak kebahagiaan yang akan kamu rasakan.
+
+Terima kasih sudah menjadi bagian dari hidupku.
+
+Aku berharap kita bisa terus bersama, saling mendukung, saling menguatkan, dan menciptakan lebih banyak kenangan indah.
+
+Aku sayang kamu.
+
+❤️
+
+Dari,
+
+<b>Risky / Khy</b>
+
+</p>
+
+</div>
+
+<h2 style="margin-top:40px;">📸 Kenangan Kita</h2>
+
+<div class="gallery">
+
+<img src="foto1.jpg">
+
+<img src="foto2.jpg">
+
+<img src="foto3.jpg">
+
+</div>
+
+<footer>
+
+Made with ❤️ by Risky / Khy
+
+</footer>
+
+</div>
+
+<script>
+
+function bukaSurat(){
+document.getElementById("surat").style.display="block";
+window.scrollTo({
+top:document.body.scrollHeight,
+behavior:"smooth"
+});
+}
+
+setInterval(function(){
+
+let heart=document.createElement("div");
+
+heart.className="heart";
+
+heart.innerHTML="❤️";
+
+heart.style.left=Math.random()*100+"vw";
+
+heart.style.animationDuration=(Math.random()*3+3)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},6000);
+
+},300);
+
+</script>
+
+</body>
+</html>
