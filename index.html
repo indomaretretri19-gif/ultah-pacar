@@ -81,7 +81,11 @@ transition:.3s;
 .gallery img:hover{
 transform:scale(1.05);
 }
-
+.slider img{
+    width:260px;
+    border-radius:20px;
+    box-shadow:0 8px 20px rgba(0,0,0,.3);
+  }
 footer{
 padding:30px;
 font-size:18px;
@@ -153,14 +157,8 @@ Dari,
 
 <h2 style="margin-top:40px;">📸 Kenangan Kita</h2>
 
-<div class="gallery">
-
-<img src="foto1.jpg">
-
-<img src="foto2.jpg">
-
-<img src="foto3.jpg">
-
+<div class="slider">
+<img id="slide" src="IMG-20260528-WA0024.jpg">
 </div>
 
 <footer>
@@ -200,7 +198,19 @@ heart.remove();
 },6000);
 
 },300);
+const foto = [
+"IMG-20260528-WA0024.jpg",
+"IMG-20260528-WA0025.jpg",
+"IMG-20260528-WA0026.jpg",
+"IMG-20260528-WA0027.jpg"
+];
 
+let index = 0;
+
+setInterval(() => {
+index = (index + 1) % foto.length;
+document.getElementById("slide").src = foto[index];
+}, 2500);
 </script>
 
 </body>
